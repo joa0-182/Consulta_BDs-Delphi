@@ -1,0 +1,95 @@
+object frmConsulta: TfrmConsulta
+  Left = 0
+  Top = 0
+  Caption = 'Consulta ao Banco de Dados'
+  ClientHeight = 435
+  ClientWidth = 517
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object opcoes: TRadioGroup
+    Left = 24
+    Top = 24
+    Width = 185
+    Height = 73
+    Caption = 'Op'#231#245'es de Consulta'
+    Columns = 2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Items.Strings = (
+      'Nome'
+      'Bairro')
+    ParentFont = False
+    TabOrder = 0
+  end
+  object pnlConsulta: TPanel
+    Left = 232
+    Top = 24
+    Width = 257
+    Height = 73
+    BevelOuter = bvNone
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 15
+      Top = 1
+      Width = 91
+      Height = 17
+      Caption = 'Digite o Nome'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 15
+      Top = 27
+      Width = 226
+      Height = 26
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object pnlBotao: TPanel
+    Left = 176
+    Top = 120
+    Width = 162
+    Height = 33
+    BevelOuter = bvNone
+    TabOrder = 2
+    object btnRealizarConsulta: TSpeedButton
+      Left = 32
+      Top = 8
+      Width = 105
+      Height = 22
+      Caption = 'Realizar Consulta'
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 176
+    Width = 465
+    Height = 241
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+end

@@ -1,0 +1,71 @@
+unit untConsulta;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.Buttons, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmConsulta = class(TForm)
+    opcoes: TRadioGroup;
+    pnlConsulta: TPanel;
+    lblConsulta: TLabel;
+    edtConsulta: TEdit;
+    pnlBotao: TPanel;
+    btnRealizarConsulta: TSpeedButton;
+    DBGrid1: TDBGrid;
+    procedure opcoesClick(Sender: TObject);
+    procedure btnRealizarConsultaClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmConsulta: TfrmConsulta;
+
+implementation
+
+{$R *.dfm}
+
+uses DM;
+
+procedure TfrmConsulta.btnRealizarConsultaClick(Sender: TObject);
+begin
+      DM2.sqlConsulta.Close;
+      DM2.sqlConsulta.SQL.Clear;
+
+      if (opcoes.ItemIndex = 0) then
+        begin
+          DM2.sqlConsulta.SQL.Add('SELECT * FROM cliente WHERE nome LIKE parametroConsulta');
+          DM2.sqlConsulta.ParamByName('parametroConsulta'). AsString := edtConsulta.Text + '%';
+        end
+
+      else if (opcoes.ItemIndex = 1) then
+        begin
+          DM2.sqlConsulta.SQL.Add('SELECT * FROM cliente WHERE bairro LIKE parametroConsulta');
+          DM2.sqlConsulta.ParamByName('parametroConsulta'). AsString := edtConsulta.Text + '%';
+        end;
+
+
+      DM2.sqlConsulta.Open;
+end;
+
+procedure TfrmConsulta.opcoesClick(Sender: TObject);
+begin
+      if (opcoes.ItemIndex = 0) then
+        begin
+          lblConsulta.Caption := 'Digite o Nome';
+        end
+
+      else if (opcoes.ItemIndex = 1) then
+        begin
+          lblConsulta.Caption := 'Digite o Bairro';
+        end;
+
+end;
+
+end.

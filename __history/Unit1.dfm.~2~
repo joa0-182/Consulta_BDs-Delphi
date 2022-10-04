@@ -1,0 +1,176 @@
+object frmLogin: TfrmLogin
+  Left = 0
+  Top = 0
+  Caption = 'frmLogin'
+  ClientHeight = 431
+  ClientWidth = 578
+  Color = clBlack
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlFundo: TPanel
+    Left = 24
+    Top = 32
+    Width = 505
+    Height = 353
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 248
+      Top = 40
+      Width = 201
+      Height = 29
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Digite seu usu'#225'rio e senha'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      WordWrap = True
+    end
+    object pnlLateral: TPanel
+      Left = 0
+      Top = 0
+      Width = 185
+      Height = 353
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 7303023
+      ParentBackground = False
+      TabOrder = 0
+      object lblWelcome: TLabel
+        Left = 32
+        Top = 24
+        Width = 105
+        Height = 21
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Bem Vindo(a)'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object lblTitulo: TLabel
+        Left = 18
+        Top = 176
+        Width = 137
+        Height = 45
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Consulta ao Banco de Dados'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        WordWrap = True
+      end
+      object lblCreditos: TLabel
+        Left = 0
+        Top = 312
+        Width = 185
+        Height = 33
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Desenvolvido por Jo'#227'o Pedro'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        WordWrap = True
+      end
+      object lblVersao: TLabel
+        Left = 18
+        Top = 227
+        Width = 137
+        Height = 14
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Vers'#227'o 1.0'
+        Color = 7237230
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Image1: TImage
+        Left = 32
+        Top = 56
+        Width = 105
+        Height = 105
+      end
+    end
+    object Panel1: TPanel
+      Left = 208
+      Top = 153
+      Width = 273
+      Height = 57
+      BevelOuter = bvNone
+      Color = clHighlight
+      ParentBackground = False
+      TabOrder = 1
+      object Label2: TLabel
+        Left = 4
+        Top = 14
+        Width = 105
+        Height = 17
+        AutoSize = False
+        Caption = 'Nome do Usu'#225'rio:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        WordWrap = True
+      end
+      object Panel2: TPanel
+        Left = 0
+        Top = 56
+        Width = 273
+        Height = 1
+        Align = alBottom
+        BevelOuter = bvNone
+        Color = clDefault
+        ParentBackground = False
+        TabOrder = 0
+        ExplicitTop = 24
+      end
+      object Edit1: TEdit
+        Left = 0
+        Top = 32
+        Width = 273
+        Height = 24
+        BevelOuter = bvNone
+        CharCase = ecUpperCase
+        Color = clMenuHighlight
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clDefault
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+      end
+    end
+  end
+end

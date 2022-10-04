@@ -1,0 +1,32 @@
+unit untConsulta;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.Buttons, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmConsulta = class(TForm)
+    opcoes: TRadioGroup;
+    pnlConsulta: TPanel;
+    Label1: TLabel;
+    Edit1: TEdit;
+    pnlBotao: TPanel;
+    btnRealizarConsulta: TSpeedButton;
+    DBGrid1: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmConsulta: TfrmConsulta;
+
+implementation
+
+{$R *.dfm}
+
+end.

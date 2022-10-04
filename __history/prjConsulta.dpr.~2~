@@ -1,0 +1,14 @@
+program prjConsulta;
+
+uses
+  Vcl.Forms,
+  Unit1 in 'Unit1.pas' {frmLogin};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmLogin, frmLogin);
+  Application.Run;
+end.

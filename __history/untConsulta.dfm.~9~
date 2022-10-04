@@ -1,0 +1,179 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Consulta ao Banco de Dados'
+  ClientHeight = 480
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object opcoes: TRadioGroup
+    Left = 80
+    Top = 25
+    Width = 185
+    Height = 73
+    Caption = 'Op'#231#245'es de Consulta'
+    Columns = 2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ItemIndex = 0
+    Items.Strings = (
+      'Nome'
+      'Bairro')
+    ParentFont = False
+    TabOrder = 0
+    OnClick = opcoesClick
+  end
+  object pnlConsulta: TPanel
+    Left = 288
+    Top = 24
+    Width = 257
+    Height = 73
+    BevelOuter = bvNone
+    TabOrder = 1
+    object lblConsulta: TLabel
+      Left = 15
+      Top = 1
+      Width = 91
+      Height = 17
+      Caption = 'Digite o Nome'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object edtConsulta: TEdit
+      Left = 15
+      Top = 24
+      Width = 226
+      Height = 26
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object pnlBotao: TPanel
+    Left = 224
+    Top = 120
+    Width = 162
+    Height = 33
+    BevelOuter = bvNone
+    TabOrder = 2
+    object btnRealizarConsulta: TSpeedButton
+      Left = 32
+      Top = 8
+      Width = 105
+      Height = 22
+      Caption = 'Realizar Consulta'
+      OnClick = btnRealizarConsultaClick
+    end
+  end
+  object teleConsulta: TDBGrid
+    Left = 32
+    Top = 175
+    Width = 577
+    Height = 282
+    DataSource = DM2.dsSqlConsulta
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'id_cliente'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ReadOnly = True
+        Title.Alignment = taCenter
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 68
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'Nome'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ReadOnly = True
+        Title.Alignment = taCenter
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 148
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'Bairro'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ReadOnly = True
+        Title.Alignment = taCenter
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 225
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'Nascimento'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ReadOnly = True
+        Title.Alignment = taCenter
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 90
+        Visible = True
+      end>
+  end
+end
